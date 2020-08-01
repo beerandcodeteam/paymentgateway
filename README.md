@@ -1,4 +1,14 @@
 # payment-gateway 0.0.1
+
+![GitHub top language](https://img.shields.io/github/languages/top/beerandcode-oficial/payment-gateway)
+![GitHub Release Date](https://img.shields.io/github/release-date/beerandcode-oficial/payment-gateway)
+![GitHub issues](https://img.shields.io/github/issues/beerandcode-oficial/payment-gateway)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/beerandcode-oficial/payment-gateway)
+![GitHub contributors](https://img.shields.io/github/contributors/beerandcode-oficial/payment-gateway)
+![GitHub All Releases](https://img.shields.io/github/downloads/beerandcode-oficial/payment-gateway/total)
+![GitHub](https://img.shields.io/github/license/beerandcode-oficial/payment-gateway)
+<!-- ![GitHub last commit](https://img.shields.io/github/last-commit/beerandcode-oficial/payment-gateway) -->
+
 An open source and free payment gateway for laravel created by Beer And Code Community
 
 
