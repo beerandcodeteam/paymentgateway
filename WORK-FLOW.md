@@ -16,4 +16,4 @@ pelo time de responsáveis do projeto. (Não abra pull request para o branch mas
 
 - Segue abaixo diagrama básico do flow obrigatório
 
-<img src="./Documents/git-flow-payment-gateway.png" alt="Diagrama de git flow" width="60%" style="margin: auto;" />
+<img src="./Documents/git-flow-payment-gateway.jpg" alt="Diagrama de git flow" width="100%" style="margin: auto;" />
