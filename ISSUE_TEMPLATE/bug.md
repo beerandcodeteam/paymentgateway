@@ -8,7 +8,7 @@ qualquer informação que julgue necessária para se entender a situação (incl
 mensagens de erro e log).
 
 
-## Steps to Reproduce:
+## Reproduzir situação:
 
 Aqui você irá lista os passos necessários para reproduzir a situação descrita 
 anteriormente. Essa informação será importante para ajudar outros a testar o 
