@@ -21,7 +21,7 @@ class PaymentGatewayServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('payment-gateway.php'),
+                __DIR__.'/../config/config.php' => config_path('paymentgateway.php'),
             ], 'config');
 
             // Publishing the views.
@@ -50,10 +50,10 @@ class PaymentGatewayServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'payment-gateway');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'paymentgateway');
 
         // Register the main class to use with the facade
-        $this->app->singleton('payment-gateway', function () {
+        $this->app->singleton('paymentgateway', function () {
             return new PaymentGateway;
         });
     }

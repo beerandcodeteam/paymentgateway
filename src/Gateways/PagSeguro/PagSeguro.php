@@ -1,8 +1,6 @@
 <?php
 
-namespace PaymentGateway\Gateways;
-
-use PaymentGateway\Gateways\PagSeguroBase;
+namespace BeerAndCodeTeam\PaymentGateway\Gateways\PagSeguro;
 
 class PagSeguro extends PagSeguroBase
 {

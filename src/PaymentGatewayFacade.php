@@ -16,6 +16,6 @@ class PaymentGatewayFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'payment-gateway';
+        return 'paymentgateway';
     }
 }

@@ -1,8 +1,6 @@
 <?php
 
-namespace PaymentGateway\Gateways;
-
-use PaymentGateway\Gateways\PayPalBase;
+namespace BeerAndCodeTeam\PaymentGateway\Gateways\PayPal;
 
 class PayPal extends PayPalBase
 {

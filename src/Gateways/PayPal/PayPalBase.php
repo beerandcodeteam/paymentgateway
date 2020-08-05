@@ -1,6 +1,6 @@
 <?php
 
-namespace PaymentGateway\Gateways;
+namespace BeerAndCodeTeam\PaymentGateway\Gateways\PayPal;
 
 class PayPalBase
 {
