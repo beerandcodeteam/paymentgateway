@@ -1,6 +1,6 @@
 {
     "name": "beerandcodeteam/paymentgateway",
-    "description": "Descrição para o time criar",
+    "description": "Primeiro Gateway feito por brasileiros open source incluindo todos os meios de pagamentos disponiveis, focado em agilizar o lado do desenvolvedor backend.",
     "keywords": [
         "beer and code",
         "payment gateway"
