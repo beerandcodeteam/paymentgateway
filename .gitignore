@@ -46,3 +46,8 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.lnk
+build
+composer.lock
+docs
+vendor
+coverage
