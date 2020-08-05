@@ -1,0 +1,54 @@
+{
+    "name": "beerandcodeteam/paymentgateway",
+    "description": "Primeiro Gateway feito por brasileiros open source incluindo todos os meios de pagamentos disponiveis, focado em agilizar o lado do desenvolvedor backend.",
+    "keywords": [
+        "beer and code",
+        "payment gateway"
+    ],
+    "homepage": "https://github.com/beerandcodeteam/paymentgateway",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "BeerAndCodeTeam",
+            "email": "admin@beerandcode.com.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BeerAndCodeTeam\\PaymentGateway\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BeerAndCodeTeam\\PaymentGateway\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BeerAndCodeTeam\\PaymentGateway\\PaymentGatewayServiceProvider"
+            ],
+            "aliases": {
+                "PaymentGateway": "BeerAndCodeTeam\\PaymentGateway\\PaymentGatewayFacade"
+            }
+        }
+    }
+}
