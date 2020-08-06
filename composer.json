@@ -25,12 +25,13 @@
     },
     "autoload": {
         "psr-4": {
-            "BeerAndCodeTeam\\PaymentGateway\\": "src"
+            "BeerAndCodeTeam\\PaymentGateway\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BeerAndCodeTeam\\PaymentGateway\\Tests\\": "tests"
+            "BeerAndCodeTeam\\PaymentGateway\\Tests\\": "tests/",
+            "BeerAndCodeTeam\\PaymentGateway\\":"packages/BeerAndCodeTeam/PaymentGateway/src/"
         }
     },
     "scripts": {
