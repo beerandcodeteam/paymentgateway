@@ -1,13 +1,13 @@
 <?php
 
-namespace BeerAndCode\PaymentGateway;
+namespace BeerAndCodeTeam\PaymentGateway\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \BeerAndCode\PaymentGateway\Skeleton\SkeletonClass
  */
-class PaymentGatewayFacade extends Facade
+class PaymentGateway extends Facade
 {
     /**
      * Get the registered name of the component.

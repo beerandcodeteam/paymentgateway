@@ -1,6 +1,6 @@
 <?php
 
-namespace BeerAndCode\PaymentGateway;
+namespace BeerAndCodeTeam\PaymentGateway;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -54,7 +54,7 @@ class PaymentGatewayServiceProvider extends ServiceProvider
 
         // Register the main class to use with the facade
         $this->app->singleton('paymentgateway', function () {
-            return new PaymentGateway;
+            return new GatewayFactory;
         });
     }
 }

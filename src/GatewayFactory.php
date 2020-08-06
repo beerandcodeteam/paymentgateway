@@ -1,8 +1,8 @@
 <?php
 
-namespace BeerAndCode\PaymentGateway;
+namespace BeerAndCodeTeam\PaymentGateway;
 
-class PaymentGateway
+class GatewayFactory
 {
     /**
      * Methods accepted by the package
@@ -23,7 +23,7 @@ class PaymentGateway
     /**
      * @param string $method
      */
-    public function __construct(string $method)
+    public function __construct(string $method = null)
     {
         if (!Arr::exists($this->acceptedMethods, $method)) {
             throw new Exception("Method not accepted.", 1);
@@ -32,5 +32,11 @@ class PaymentGateway
         $this->method = $method;
 
         $this->initialize();
+    }
+
+    /** Sugestão de função discutida em grupo */
+    public function create(String $method)
+    {
+        //code here
     }
 }
