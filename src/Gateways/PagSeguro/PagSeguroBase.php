@@ -13,9 +13,27 @@ abstract class PagSeguroBase
         'Authorization' => $this->token,
         'x-api-version' => '4.0',
     ];
+    /**
+     * Request in api point /charges using method POST
+     *
+     * @param Array $Values Receives params for charge
+     * @return json
+     **/
     abstract function charge(array $values);
 
+    /**
+     * Request in api point /charges/$chargeid using method GET
+     *
+     * @param String $chageId Receives id of charge PagSeguro
+     * @return json
+     **/
     abstract function findCharge(String $chargeId);
 
+    /**
+     * Request in api point /charges/$chargeid/cancel using method POST
+     *
+     * @param String $chageId Receives id of charge PagSeguro
+     * @return json
+     **/
     abstract function refound(String $chargeId);
 }
