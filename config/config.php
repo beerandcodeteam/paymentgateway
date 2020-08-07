@@ -11,10 +11,6 @@ return [
         'envinronment' => env('PAYMENT_GATEWAY_ENV', 'sandbox')
     ],
 
-
-
-
-
     /*
      * Providers
      */
@@ -23,5 +19,3 @@ return [
         'paypal' => \BeerAndCodeTeam\PaymentGateway\Gateways\PayPal\PayPal::class
     ],
 ];
-
-
