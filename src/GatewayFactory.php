@@ -2,6 +2,8 @@
 
 namespace BeerAndCodeTeam\PaymentGateway;
 
+use BeerAndCodeTeam\PaymentGateway\Gateways\PagSeguro\PagSeguro;
+
 class GatewayFactory
 {
     /**
@@ -9,8 +11,8 @@ class GatewayFactory
      *
      * @var array
      */
-    private $acceptedMethods = [
-        'PagSeguro', 'PayPal'
+    private $acceptedGateways = [
+        'pagseguro', 'paypal'
     ];
 
     /**
@@ -18,25 +20,29 @@ class GatewayFactory
      *
      * @var string
      */
-    private $method;
+    private $gateway;
 
     /**
      * @param string $method
      */
-    public function __construct(string $method = null)
+    public function create(string $gateway = null)
     {
-        if (!Arr::exists($this->acceptedMethods, $method)) {
-            throw new Exception("Method not accepted.", 1);
+        if (in_array($gateway, $this->acceptedGateways)) {
+            $this->gateway = config('paymentgateway.providers.'.$gateway);
+
+            return $this->initialize();
         }
 
-        $this->method = $method;
-
-        $this->initialize();
+        throw new \Exception("Method not accepted.", 1);
     }
 
-    /** Sugestão de função discutida em grupo */
-    public function create(String $method)
+    /**
+     * Returns the object for the chosen gateway
+     *
+     * @return object
+     */
+    private function initialize(): object
     {
-        //code here
+        return new $this->gateway();
     }
 }
