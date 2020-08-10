@@ -13,4 +13,7 @@ class PagSeguroBase
         'Authorization' => $this->token,
         'x-api-version' => '4.0',
     ];
+
+    /** @var array $baseUrl base url for pagseguro's api */
+    protected $baseUrl = 'https://sandbox.api.pagseguro.com/';
 }
