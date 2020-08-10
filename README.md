@@ -50,7 +50,7 @@ Por favor, leia o [CHANGELOG](CHANGELOG.md) para saber sobre as mais recentes al
 
 ## Contribuição
 
-Por favor, consulte nossa [WIKI](https://github.com/beerandcodeteam/paymentgateway/wiki) para mais detalhes.
+Caso queira reportar algum bug ou propor alguma funcionalidade/alteração para o pacote, por favor, consulte nossa [WIKI](https://github.com/beerandcodeteam/paymentgateway/wiki) para mais detalhes.
 
 ## Créditos
 
