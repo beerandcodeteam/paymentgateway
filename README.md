@@ -22,7 +22,7 @@ Você pode instalar o pacote via composer¹:
 ```bash
 composer require beerandcodeteam/paymentgateway
 ```
-O pacote vai automaticamente registrar um serviço e alias.
+O pacote vai automaticamente registrar um ServiceProvider e Alias.
 
 Caso queira, você pode publicar o arquivo de configuração do pacote executando:
 
@@ -35,7 +35,7 @@ php artisan vendor:publish --tag=paymentgateway-config
 ## Como usar
 
 ``` php
-// Usage description here
+// Em construção
 ```
 
 ## Testando
@@ -46,7 +46,7 @@ composer test
 
 ## Changelog
 
-Por favor, leia o [CHANGELOG](CHANGELOG.md) conhecer mais sobre as mais recentes alterações.
+Por favor, leia o [CHANGELOG](CHANGELOG.md) para saber sobre as mais recentes alterações.
 
 ## Contribuição
 
@@ -55,11 +55,11 @@ Por favor, consulte nossa [WIKI](https://github.com/beerandcodeteam/paymentgatew
 ## Créditos
 
 - [Beer and Code](https://github.com/beerandcodeteam)
-- [Contributors](../../contributors)
+- [Contributors](https://github.com/beerandcodeteam/paymentgateway/graphs/contributors)
 
 ## Licença
 
-Licença MIT (MIT). Por favor, consulte [License File](LICENSE.md) para mais informações.
+Licença MIT. Por favor, consulte o [arquivo de licença](LICENSE.md) para mais informações.
 
 ## Laravel Package Boilerplate
 
