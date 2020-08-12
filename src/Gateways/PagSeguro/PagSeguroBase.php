@@ -27,4 +27,17 @@ class PagSeguroBase
             $this->baseUrl = 'https://api.pagseguro.com/';
         }
     }
+
+    /**
+     * setToken
+     *
+     * This function defines the token for the pagseguro api
+     *
+     * @param string $token 
+     * @return void
+     **/
+    public function setToken(string $token)
+    {
+        $this->token = $token;
+    }
 }
