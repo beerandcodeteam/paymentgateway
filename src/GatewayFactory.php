@@ -28,7 +28,7 @@ class GatewayFactory
     public function create(string $gateway = null)
     {
         if (in_array($gateway, $this->acceptedGateways)) {
-            $this->gateway = config('paymentgateway.providers.'.$gateway);
+            $this->gateway = config('paymentgateway.alias.'.$gateway);
 
             return $this->initialize();
         }
