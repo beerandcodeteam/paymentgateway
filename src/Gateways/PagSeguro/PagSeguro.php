@@ -21,4 +21,19 @@ class PagSeguro extends PagSeguroBase
             return $th->getMessage();
         }
     }
+
+    public function refund(string $transactionCode, int $refundAmount)
+    {
+        try {
+            $response = Http::withHeaders($this->headers)
+                ->post($this->baseUrl . 'charges/' . $transactionCode . '/cancel', [
+                    'amount' => [
+                        'value' => $refundAmount
+                    ]
+                ]);
+            return collect($response->json());
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
+    }
 }
