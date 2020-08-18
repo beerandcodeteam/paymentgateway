@@ -42,4 +42,19 @@ class PagSeguro extends PagSeguroBase
             return $th->getMessage();
         }
     }
+
+    public function capture(string $transactionCode, int $amount)
+    {
+        try {
+            $response = Http::withHeaders($this->headers)
+                ->post($this->baseUrl . 'charges/' . $transactionCode . '/capture',[
+                    'amount' => [
+                        'value' => $amount
+                    ]
+                ]);
+            return collect($response->json());
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
+    }
 }
