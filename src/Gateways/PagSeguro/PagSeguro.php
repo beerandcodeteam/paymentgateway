@@ -6,9 +6,15 @@ use Illuminate\Support\Facades\Http;
 
 class PagSeguro extends PagSeguroBase
 {
-    public function pay()
+    public function pay(Charge $charge)
     {
-        return 'Pagando com pagseguro';
+        try {
+            $response = Http::withHeaders($this->headers)
+                ->post($this->baseUrl.'charges', $charge->toArray());
+                return collect($response->json());
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
     }
 
     public function searchByTransactionCode(String $transactionCode)
