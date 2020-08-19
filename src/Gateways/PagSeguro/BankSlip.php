@@ -9,7 +9,6 @@ class BankSlip implements PaymentMethodInterface
     private string $dueDate;
     private array $instructionsLines = [];
     private Holder $holder;
-    private Adress $adress;
 
     public function __construct()
     {
@@ -23,7 +22,7 @@ class BankSlip implements PaymentMethodInterface
                 "due_date" => $this->dueDate,
                 "instruction_lines" => [
                     "line_1" => $this->instructionsLines[0],
-                    "line_2" => $this->instructionsLines[0]
+                    "line_2" => $this->instructionsLines[1]
                 ],
                 "holder" => [
                     "name" => $this->holder->getName(),
@@ -50,6 +49,18 @@ class BankSlip implements PaymentMethodInterface
             throw new \Exception("Error: invalid due date " . $dueDate);
         }
         $this->dueDate = $dueDate;
+    }
+
+    public function setInstructionsLines(string $lineOne, string $lineTwo)
+    {
+        if (strlen($lineOne) == 0 || strlen($lineOne) > 75) {
+            throw new \Exception("Error: line 1 must be 1-75 characters. It has " . strlen($lineOne));
+        }
+        if (strlen($lineTwo) == 0 || strlen($lineTwo) > 75) {
+            throw new \Exception("Error: line 2 must be 1-75 characters. It has " . strlen($lineTwo));
+        }
+        $this->instructionsLines[0] = $lineOne;
+        $this->instructionsLines[1] = $lineTwo;
     }
 
     public function fillHolder(string $name, string $taxId, string $email)
