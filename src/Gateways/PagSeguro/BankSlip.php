@@ -10,6 +10,11 @@ class BankSlip implements PaymentMethodInterface
     private array $instructionsLines = [];
     private Holder $holder;
     private Adress $adress;
+
+    public function __construct()
+    {
+        $this->holder = new Holder;
+    }
     public function toArray(): array
     {
         return [
