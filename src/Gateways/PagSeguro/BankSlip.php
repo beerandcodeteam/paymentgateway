@@ -43,4 +43,9 @@ class BankSlip implements PaymentMethodInterface
             ]
         ];
     }
+
+    public function fillHolder(string $name, string $taxId, string $email)
+    {
+        $this->holder->fill($name, $taxId, $email);
+    }
 }
