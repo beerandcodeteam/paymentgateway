@@ -16,4 +16,12 @@ class Holder
         }
         $this->name = $name;
     }
+
+    public function setTaxId(string $taxId)
+    {
+        if (strlen($taxId) < 11 || strlen($taxId) > 14) {
+            throw new \Exception("Error: the taxId most be 11-14 characters. It has " . strlen($taxId));
+        }
+        $this->taxId = $taxId;
+    }
 }
