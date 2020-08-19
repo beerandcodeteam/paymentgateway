@@ -7,7 +7,7 @@ class Holder
     private string $name;
     private string $taxId;
     private string $email;
-    private Address $address;
+    //private Address $address;
 
     public function setName(string $name)
     {
@@ -23,5 +23,14 @@ class Holder
             throw new \Exception("Error: the taxId most be 11-14 characters. It has " . strlen($taxId));
         }
         $this->taxId = $taxId;
+    }
+
+    public function setEmail(string $email)
+    {
+        if (strlen($email) < 10 || strlen($email) > 255 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new \Exception("Error: invalid email");
+        }
+        $this->email = $email;
+        return $this->email;
     }
 }
