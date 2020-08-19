@@ -44,6 +44,14 @@ class BankSlip implements PaymentMethodInterface
         ];
     }
 
+    public function setDueDate(string $dueDate)
+    {
+        if (!\DateTime::createFromFormat('Y-m-d', $dueDate) || strlen($dueDate) != 10) {
+            throw new \Exception("Error: invalid due date " . $dueDate);
+        }
+        $this->dueDate = $dueDate;
+    }
+
     public function fillHolder(string $name, string $taxId, string $email)
     {
         $this->holder->fill($name, $taxId, $email);
