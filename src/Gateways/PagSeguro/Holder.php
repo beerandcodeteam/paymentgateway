@@ -17,6 +17,11 @@ class Holder
         $this->name = $name;
     }
 
+    public function getName()
+    {
+        return $this->name;
+    }
+
     public function setTaxId(string $taxId)
     {
         if (strlen($taxId) != 11 && strlen($taxId) != 14) {
@@ -25,12 +30,21 @@ class Holder
         $this->taxId = $taxId;
     }
 
+    public function getTaxId()
+    {
+        return $this->taxId;
+    }
+
     public function setEmail(string $email)
     {
         if (strlen($email) < 10 || strlen($email) > 255 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new \Exception("Error: invalid email");
         }
         $this->email = $email;
+    }
+
+    public function getEmail()
+    {
         return $this->email;
     }
 }
