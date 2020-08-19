@@ -12,6 +12,14 @@ class Address
    private string $street;
    private string $number;
    private string $locality;
-   
 
+   public function setCountry(string $country)
+   {
+      $this->country = $country;
+   }
+
+   public function getCountry()
+   {
+      return $this->country;
+   }
 }
