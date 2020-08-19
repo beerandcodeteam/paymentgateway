@@ -19,7 +19,7 @@ class Charge
                 $this->paymentMethod = new CreditCard();
                 break;
             case 'BankSlip':
-                # $this->paymentMethod = new BankSlip();
+                $this->paymentMethod = new BankSlip();
                 break;
             default:
                 throw new \Exception("Error: payment method {$paymentMethod} not existis");
