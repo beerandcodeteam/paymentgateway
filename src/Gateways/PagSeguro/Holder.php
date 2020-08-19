@@ -47,4 +47,11 @@ class Holder
     {
         return $this->email;
     }
+
+    public function fill(string $name, string $taxId, string $email)
+    {
+        $this->setName($name);
+        $this->setTaxId($taxId);
+        $this->setEmail($email);
+    }
 }
