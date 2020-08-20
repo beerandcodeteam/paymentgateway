@@ -87,4 +87,17 @@ class Address
    {
       return $this->street;
    }
+
+   public function setNumber(string $number)
+   {
+      if (strlen($number) ==  0 || strlen($number) > 20) {
+         throw new \Exception("Error: number must be 20 characters. It has " . strlen($number));
+      }
+      $this->number = $number;
+   }
+
+   public function getNumber()
+   {
+      return $this->number;
+   }
 }
