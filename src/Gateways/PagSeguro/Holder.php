@@ -7,7 +7,12 @@ class Holder
     private string $name;
     private string $taxId;
     private string $email;
-    //private Address $address;
+    private Address $address;
+
+    public function __contruct()
+    {
+        $this->address = new Address;
+    }
 
     public function setName(string $name)
     {
