@@ -22,4 +22,17 @@ class Address
    {
       return $this->country;
    }
+
+   public function setRegion(string $region)
+   {
+      if (strlen($region) ==  0 || strlen($region) > 200) {
+         throw new \Exception("Error: region must be 1-200 characters. It has " . strlen($region));
+      }
+      $this->region = $region;
+   }
+
+   public function getRegion()
+   {
+      return $this->region;
+   }
 }
