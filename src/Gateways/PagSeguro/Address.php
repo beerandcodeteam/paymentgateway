@@ -100,4 +100,17 @@ class Address
    {
       return $this->number;
    }
+
+   public function setLocality(string $locality)
+   {
+      if (strlen($locality) ==  0 || strlen($locality) > 100) {
+         throw new \Exception("Error: locality must be 100 characters. It has " . strlen($locality));
+      }
+      $this->locality = $locality;
+   }
+
+   public function getLocality()
+   {
+      return $this->locality;
+   }
 }
