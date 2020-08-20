@@ -48,4 +48,17 @@ class Address
    {
       return $this->regionCode;
    }
+
+   public function setCity(string $city)
+   {
+      if (strlen($city) ==  0 || strlen($city) > 100) {
+         throw new \Exception("Error: regionCode must be 1-100 characters. It has " . strlen($city));
+      }
+      $this->city = $city;
+   }
+
+   public function getCity()
+   {
+      return $this->city;
+   }
 }
