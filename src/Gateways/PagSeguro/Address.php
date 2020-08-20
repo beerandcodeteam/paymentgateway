@@ -35,4 +35,17 @@ class Address
    {
       return $this->region;
    }
+
+   public function setRegionCode(string $regionCode)
+   {
+      if (strlen($regionCode) ==  0 || strlen($regionCode) > 2) {
+         throw new \Exception("Error: regionCode must be 2 characters. It has " . strlen($regionCode));
+      }
+      $this->regionCode = $regionCode;
+   }
+
+   public function getRegionCode()
+   {
+      return $this->regionCode;
+   }
 }
