@@ -61,4 +61,17 @@ class Address
    {
       return $this->city;
    }
+
+   public function setPostalCode(string $postalCode)
+   {
+      if (strlen($postalCode) ==  0 || strlen($postalCode) > 8) {
+         throw new \Exception("Error: regionCode must be 8 characters. It has " . strlen($postalCode));
+      }
+      $this->postalCode = $postalCode;
+   }
+
+   public function getPostalCode()
+   {
+      return $this->postalCode;
+   }
 }
