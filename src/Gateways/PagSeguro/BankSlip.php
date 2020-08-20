@@ -9,10 +9,12 @@ class BankSlip implements PaymentMethodInterface
     private string $dueDate;
     private array $instructionsLines = [];
     private Holder $holder;
+    private Address $address;
 
     public function __construct()
     {
         $this->holder = new Holder;
+        $this->address = new Address;
     }
     public function toArray(): array
     {
@@ -29,14 +31,14 @@ class BankSlip implements PaymentMethodInterface
                     "tax_id" => $this->holder->getTaxId(),
                     "email" => $this->holder->getEmail(),
                     "address" => [
-                        "country" => $this->adress->getCountry(),
-                        "region" => $this->adress->getRegion(),
-                        "region_code" => $this->adress->getRegionCode(),
-                        "city" => $this->adress->getCity(),
-                        "postal_code" => $this->adress->getPostalCode(),
-                        "street" => $this->adress->getStreet(),
-                        "number" => $this->adress->getNumber(),
-                        "locality" => $this->adress->getLocality()
+                        "country" => $this->address->getCountry(),
+                        "region" => $this->address->getRegion(),
+                        "region_code" => $this->address->getRegionCode(),
+                        "city" => $this->address->getCity(),
+                        "postal_code" => $this->address->getPostalCode(),
+                        "street" => $this->address->getStreet(),
+                        "number" => $this->address->getNumber(),
+                        "locality" => $this->address->getLocality()
                     ]
                 ]
             ]
@@ -66,5 +68,25 @@ class BankSlip implements PaymentMethodInterface
     public function fillHolder(string $name, string $taxId, string $email)
     {
         $this->holder->fill($name, $taxId, $email);
+    }
+
+    public function fillAddress(
+        string $country,
+        string $region,
+        string $regionCode,
+        string $city,
+        string $postalCode,
+        string $street,
+        string $number,
+        string $locality
+    ) {
+        $this->address->setCountry($country);
+        $this->address->setRegion($region);
+        $this->address->setRegionCode($regionCode);
+        $this->address->setCity($city);
+        $this->address->setPostalCode($postalCode);
+        $this->address->setStreet($street);
+        $this->address->setNumber($number);
+        $this->address->setLocality($locality);
     }
 }
