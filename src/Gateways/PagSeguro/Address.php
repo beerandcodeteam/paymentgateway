@@ -52,7 +52,7 @@ class Address
    public function setCity(string $city)
    {
       if (strlen($city) ==  0 || strlen($city) > 100) {
-         throw new \Exception("Error: regionCode must be 1-100 characters. It has " . strlen($city));
+         throw new \Exception("Error: city must be 1-100 characters. It has " . strlen($city));
       }
       $this->city = $city;
    }
@@ -65,7 +65,7 @@ class Address
    public function setPostalCode(string $postalCode)
    {
       if (strlen($postalCode) ==  0 || strlen($postalCode) > 8) {
-         throw new \Exception("Error: regionCode must be 8 characters. It has " . strlen($postalCode));
+         throw new \Exception("Error: PostalCode must be 8 characters. It has " . strlen($postalCode));
       }
       $this->postalCode = $postalCode;
    }
@@ -73,5 +73,18 @@ class Address
    public function getPostalCode()
    {
       return $this->postalCode;
+   }
+
+   public function setStreet(string $street)
+   {
+      if (strlen($street) ==  0 || strlen($street) > 100) {
+         throw new \Exception("Error: street must be 100 characters. It has " . strlen($street));
+      }
+      $this->street = $street;
+   }
+
+   public function getStreet()
+   {
+      return $this->street;
    }
 }
