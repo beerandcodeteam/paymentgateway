@@ -2,8 +2,6 @@
 
 namespace BeerAndCodeTeam\PaymentGateway\Gateways\PagSeguro;
 
-use Illuminate\Support\Facades\Date;
-
 class BankSlip implements PaymentMethodInterface
 {
     private string $dueDate;
@@ -47,7 +45,7 @@ class BankSlip implements PaymentMethodInterface
 
     public function setDueDate(string $dueDate)
     {
-        if (!preg_match('/^(20+[2-9][0-9])-(0+[1-9]|1[012])-(0+[1-9]|[12][0-9]|3[01])$/',$dueDate)) {
+        if (!preg_match('/^(20+[2-9][0-9])-(0+[1-9]|1[012])-(0+[1-9]|[12][0-9]|3[01])$/', $dueDate)) {
             throw new \Exception("Error: invalid due date " . $dueDate);
         }
         $this->dueDate = $dueDate;
