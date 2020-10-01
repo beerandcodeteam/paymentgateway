@@ -10,8 +10,8 @@
 
 | **Laravel** | **paymentgateway** |
 |-------------|--------------------|
-| 6.x         | sem release ativa  |
 | 7.x         | sem release ativa  |
+| 8.x         | sem release ativa  |
 
 Pacote Laravel 100% brasileiro e open-source para integração de gateways de pagamento, focado em agilizar o desenvolvimento.
 
