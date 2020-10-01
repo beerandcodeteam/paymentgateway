@@ -1,4 +1,4 @@
-- **Tipo de implementação**: (refatoração/feature nova) 
+- **Tipo de implementação**: (refactor/feature) 
 - **Dependências**:
 
 ## Descrição:
